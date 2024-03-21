@@ -69,11 +69,12 @@ Testing the webserver.
 
 </body>
 </html>
-'''
+```
 
 
 
 ## OUTPUT:
+
 <img width="960" alt="image" src="https://github.com/Jayapriya242/simplewebserver/assets/114279259/b1d41d14-4e46-49bd-b3f0-88c57bb16dc5">
 
 
