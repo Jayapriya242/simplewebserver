@@ -77,6 +77,8 @@ Testing the webserver.
 
 <img width="960" alt="image" src="https://github.com/Jayapriya242/simplewebserver/assets/114279259/b1d41d14-4e46-49bd-b3f0-88c57bb16dc5">
 
+![2](https://github.com/Jayapriya242/simplewebserver/assets/114279259/34ed1629-be4c-4209-ac83-0fb17386d410)
+
 
 
 
