@@ -22,12 +22,77 @@ Serving the HTML pages.
 Testing the webserver.
 
 ## PROGRAM:
-![program](https://github.com/Jayapriya242/simplewebserver/assets/114279259/f585354d-306d-4af2-9f9f-91dc11b2840c)
+```
+from http.server import HTTPServer,BaseHTTPRequestHandler
+
+content='''
+<!doctype html>
+<html>
+<head>
+<title> My Web Server</title>
+</head>
+<body>
+<h1>Top Five Revenue from Companies</h1>
+<table border=2>
+<tr>
+<th> Company Name </th>
+<th> Revenue </th>
+<th> Financial Year </th>
+</tr>
+
+<tr>
+<td> Microsoft </td>
+<td> 86$ </td>
+<td> 2014 </td>
+</tr>
+
+<tr>
+<td> Oracle </td>
+<td> 37$ </td>
+<td> 2013 </td>
+</tr>
+
+<tr>
+<td> SAP </td>
+<td> 20$ </td>
+<td> 2013 </td>
+</tr>
+
+<tr>
+<td> VMware </td>
+<td> 5.2$ </td>
+<td> 2013 </td>
+</tr>
+
+<tr>
+<td> CA Technologies </td>
+<td> 4.7$ </td>
+<td> 2013 </td>
+</tr>
+
+</body>
+</html>
+'''
+
+class MyServer(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("Get request received...")
+        self.send_response(200) 
+        self.send_header("content-type", "text/html")       
+        self.end_headers()
+        self.wfile.write(content.encode())
+
+print("This is my webserver") 
+server_address =('',8000)
+httpd = HTTPServer(server_address,MyServer)
+httpd.serve_forever()
+```
 
 
 ## OUTPUT:
-![output1](https://github.com/Jayapriya242/simplewebserver/assets/114279259/2cb82a2d-1f71-4ec0-89f0-1b44538e935e)
-![output2](https://github.com/Jayapriya242/simplewebserver/assets/114279259/1cfa8b72-a9fb-4a41-99f3-d78a3d5a5cdf)
+![1(SWS)](https://github.com/Jayapriya242/simplewebserver/assets/114279259/eb65e549-36dc-4404-9496-342be1a11820)
+
+![2(SWS)](https://github.com/Jayapriya242/simplewebserver/assets/114279259/d217ddef-7255-41a0-ba16-7dde410a9a9a)
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
